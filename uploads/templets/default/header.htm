@@ -1,0 +1,16 @@
+<nav ng-controller="headerController" class="menu {{show ? 'menu-show' : 'menu-hide'}}">
+    <h1 class="logo">
+        <a class="nav-link" href="/api/jp/">
+            <img src="/assets/images/logo@2x.png">
+        </a>
+    </h1>
+    <div class="menu">
+        <ul>
+            {dede:channel typeid = '1' type='sun' row='10'}
+            <li><a class="nav-link" href='[field:typeurl/]'>[field:typename/]</a></li>
+            {/dede:channel}
+        </ul>
+    </div>
+    <span ng-click="setState(true)" ng-if="!show" class="menu_btn"><img src="/assets/images/menu.png"></span>
+    <span ng-click="setState(false)" ng-if="show" class="close_btn"><img src="/assets/images/close.png"></span>
+</nav>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="hyu7629490001.my3w.com" id="88ceddc1-f038-41d9-a1aa-fe73414224dd" port="22" nameFormat="DESCRIPTIVE" username="hyu7629490001FTP" />
+    </configs>
+  </component>
+</project>

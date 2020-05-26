@@ -1,0 +1,1 @@
+INSERT INTO `dede_admin` VALUES('1','10','gaiassecret_admin','f754227ab98e74b048d1','admin','','','0','1589270073','116.22.2.181');

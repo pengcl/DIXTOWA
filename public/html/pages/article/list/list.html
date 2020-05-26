@@ -1,0 +1,27 @@
+<div class="ng-header {{scrollTop > 0 ? 'scroll' : ''}}"></div>
+<div class="article-banner">
+    <img src="/images/article/banner.png">
+    <div class="overlay"></div>
+    <h1>JOURNAL</h1>
+</div>
+<div class="article-list-wrap">
+    <div class="article-list">
+        <div ng-repeat="item in articles" class="article-item">
+            <div class="article-img">
+                <img ng-src="{{item.pic}}">
+            </div>
+            <div class="article-content">
+                <div class="article-content-date">{{item.date}}</div>
+                <div class="article-content-title">{{item.title}}</div>
+                <p>{{item.desc}}</p>
+                <!--<div class="arrow-right">
+                    <img src="/images/index/arrow-right.png">
+                </div>-->
+            </div>
+            <a class="overlay" href="/article/item/1"></a>
+        </div>
+    </div>
+</div>
+<div class="ng-page" page="page" total="totalPages"></div>
+<div class="ng-footer"></div>
+<div class="ng-top"></div>

@@ -1,0 +1,40 @@
+@import "../../../sass/variables";
+
+.ng-pages {
+  text-align: center;
+  font-size: 0;
+  margin: 10px;
+
+  a, span {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    background-color: transparent;
+    margin: 0 5px;
+    color: #9E7E77;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    line-height: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:hover {
+      border: 1px solid #9E7E77;
+      color: #9E7E77;
+    }
+    &.curr {
+      border: 1px solid $color-primary;
+      color: $color-primary;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,24 @@
+.contact-wrap {
+  margin: 150px auto;
+  width: 900px;
+  h2 {
+    font-size: 24px;
+  }
+  .pure-u-1-5 {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 0;
+    line-height: 2;
+  }
+  .pure-u-4-5 {
+    font-size: 16px;
+    padding: 15px 0;
+    line-height: 2;
+  }
+  .line {
+    height: 1px;
+    background: #C9C9C9;
+    width: 100%;
+    display: block;
+  }
+}

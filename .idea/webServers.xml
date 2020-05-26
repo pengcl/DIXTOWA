@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8497ad0a-01ea-4952-bdd1-566bdcd41808" name="DIXTOWA" url="http://hdm72190941.my3w.com">
+        <fileTransfer rootFolder="/htdocs" host="hyu7629490001.my3w.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

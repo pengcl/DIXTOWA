@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="cn" id="ng-app" ng-app="app" class="{{state.bodyClass}}">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <title ng-bind="pageTitle"></title>
+    <meta name="keywords" content="{{pageKeywords}}">
+    <meta name="description" content="">
+    <meta name="viewport"
+          content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.1/pure-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_1427441_ocz6ko6ler.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/owl-carousel/1.32/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/owl-carousel/1.32/owl.theme.min.css">
+    <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdn.bootcss.com/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdn.bootcss.com/es5-shim/4.5.9/es5-sham.min.js"></script>
+    <script type="text/javascript">
+        var tampTime = new Date().getTime();
+        //var ngVersion = "1.6.3";
+        document.write("<link rel='stylesheet' href='/css/1.0.0/app.min.css?" + tampTime + "'>");
+    </script>
+</head>
+
+<body class="{{state.bodyClass}}">
+<div id="container" class="page-wrapper">
+    <div id="content-container" class="view-container" ng-controller="indexController">
+        <div class="ng-header {{scrollTop > 0 ? 'scroll' : ''}}">
+            {dede:include filename="header.htm"/}
+        </div>
+        <div class="index-wrap">
+            <div id="banner">
+                <div class="banner-content">
+                    <h1>もっぱら党のために開発する</h1>
+                    <p>メディコス製薬</p>
+                </div>
+                <div class="mouse">
+                    <img src="/assets/images/index/mouse@2x.png">
+                </div>
+            </div>
+            <div class="section-concept section">
+                <div class="section-wrap">
+                    <div class="pure-g">
+                        <div class="pure-u-1-4">
+                            <div class="concept-box">
+                                <img src="/assets/images/index/concept-1@2x.png">
+                                <p>精纯成分</p>
+                            </div>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <div class="concept-box">
+                                <img src="/assets/images/index/concept-2@2x.png">
+                                <p>优化配方</p>
+                            </div>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <div class="concept-box">
+                                <img src="/assets/images/index/concept-3@2x.png">
+                                <p>无菌工艺</p>
+                            </div>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <div class="concept-box">
+                                <img src="/assets/images/index/concept-4@2x.png">
+                                <p>制药标准</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="concept-content">
+                        <div class="concept-content-text">
+                            <h2>CONCEPT</h2>
+                            <h3>成分至上主义。<br>
+                                日式轻龄美学新主張。</h3>
+                            <p>融合了科学家的严谨与艺术家的审美，引入“制药标准”<br>
+                                通过有效成分的臻选，适宜亚洲肤质的浓度配比。<br>
+                                以及无菌级的制药生产标准，为你带来与众不同的御肌之力。</p>
+                            <a class="button">品牌の理念</a>
+                        </div>
+                        <div class="concept-content-img">
+                            <img src="/assets/images/index/concept@2x.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-video section">
+                <div class="pure-g">
+                    <div class="pure-u-3-5">
+                        <div class="video-box">
+                            <img src="/assets/images/index/video.png">
+                        </div>
+                    </div>
+                    <div class="pure-u-2-5">
+                        <div class="video-box">
+                            <img src="/assets/images/index/video-poster.png">
+                            <h2>INGREDIENTS</h2>
+                            <h3>以成分改写肌龄</h3>
+                            <p>重拾年轻的美肌秘密   |   成分至上   |   删繁至简<br>
+                                这就是DIXTOWA<br>
+                                这就是属于你的轻肌时代</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-catalog section">
+                <div class="section-catalog-posters">
+                    <div class="pure-g">
+                        {dede:arclist typeid = '3' titlelen='60' row='2'}
+                        <div class="pure-u-1-4">
+                            <div class="img-box">
+                                <img class="animated {{three ? 'fadeInLeft' : ''}}" src="[field:litpic /]">
+                            </div>
+                            <h3 class="title">[field:title /]</h3>
+                            <p class="desc">[field:info /]</p>
+                        </div>
+                        {/dede:arclist}
+                        <!--<div class="pure-u-1-4">
+                            <div class="img-box">
+                                <img class="animated {{three ? 'fadeInLeft' : ''}}" src="/assets/images/index/catalog-2.png">
+                            </div>
+                            <h3 class="title">酵母面膜</h3>
+                            <p class="desc">氨基酸配方、90%天然植物由来、无硅油、强韧发根、温和洗净、不给头皮增加负担。</p>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <div class="img-box">
+                                <img class="animated {{three ? 'fadeInLeft' : ''}}" src="/assets/images/index/catalog-3.png">
+                            </div>
+                            <h3 class="title">寡肽原液</h3>
+                            <p class="desc">温和洁面、滋润透亮、0皂基配方、6大安心、氨基酸温和净澈、促进护肤品吸收、泡沫丰富细腻</p>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <div class="img-box">
+                                <img class="animated {{three ? 'fadeInLeft' : ''}}" src="/assets/images/index/catalog-4.png">
+                            </div>
+                            <h3 class="title">玻尿酸舒安面霜</h3>
+                            <p class="desc">快速注入水分、舒缓疲惫肌肤、密集补水锁水、强韧肌肤屏障，肌肤补水、美时美刻、焕活水光。</p>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="section-product section">
+                <div class="pure-g">
+                    <div class="pure-u-3-5">
+                        <img src="/assets/images/index/product.png">
+                    </div>
+                    <div class="pure-u-2-5">
+                        <h3>专为成分党研制</h3>
+                        <p>我们研究的使命<br>
+                            是让护肤回归成分本质</p>
+                        <img src="/assets/images/index/label@2x.png">
+                        <p>メディコス製薬株式会社研究所所长</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ng-footer"></div>
+        <div class="ng-top"></div>
+
+    </div>
+    <ng-share></ng-share>
+    <ng-dialog></ng-dialog>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/json2/20160511/json2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.19/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.19/angular-route.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.19/angular-resource.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.19/angular-cookies.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.19/angular-animate.min.js"></script>
+<script src="https://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"
+        type="text/javascript"></script>
+<script>
+    document.write("<script src='/components/apiConfig.js?" + tampTime + "'><\/script>");
+    document.write("<script src='/components/1.0.0/template.tpl.js?" + tampTime + "'><\/script>");
+    document.write("<script src='/components/1.0.0/public.min.js?" + tampTime + "'><\/script>");
+</script>
+</body>
+</html>

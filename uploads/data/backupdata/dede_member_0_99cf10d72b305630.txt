@@ -1,0 +1,1 @@
+INSERT INTO `dede_member` VALUES('1','个人','gaiassecret_admin','faa5ff754227ab98e74b048d1eca5d6b','gaiassecret_admin','男','100','0','0','0','','10000','10','0','','0','','1584785590','','1589270073','116.22.2.181','-1');

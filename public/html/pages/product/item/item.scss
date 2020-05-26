@@ -1,0 +1,35 @@
+@import "../../../../sass/variables";
+
+.product-item-banner {
+  p {
+    margin: 55px 0 0 50px;
+  }
+}
+
+.product-item-wrap {
+  margin: 40px 0 0 0;
+
+  .banner {
+    height: 750px;
+    position: relative;
+
+    img {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -960px;
+    }
+  }
+
+  .detail {
+    width: 1280px;
+    margin: 100px auto;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
