@@ -19,23 +19,19 @@
     line-height: 150px;
   }
   p {
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 24px;
     margin: 55px 0 0 50px;
   }
 }
 
 .concept-wrap {
   .banner {
-    height: 630px;
     overflow: hidden;
-    position: relative;
     margin-top: 100px;
     img {
       display: block;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      margin-left: -960px;
+      width: 100%;
     }
   }
   .top {

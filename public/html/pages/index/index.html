@@ -1,10 +1,7 @@
 <div class="ng-header {{scrollTop > 0 ? 'scroll' : ''}}"></div>
 <div class="index-wrap">
     <div id="banner">
-        <div class="banner-content">
-            <h1>もっぱら党のために開発する</h1>
-            <p>メディコス製薬</p>
-        </div>
+        <div class="banner-content ng-owl"></div>
         <div class="mouse">
             <img src="/assets/images/index/mouse@2x.png">
         </div>
@@ -13,25 +10,25 @@
         <div class="section-wrap">
             <div class="pure-g">
                 <div class="pure-u-1-4">
-                    <div class="concept-box">
+                    <div class="concept-box animated {{one ? 'fadeInDown' : ''}}">
                         <img src="/assets/images/index/concept-1@2x.png">
                         <p>精纯成分</p>
                     </div>
                 </div>
                 <div class="pure-u-1-4">
-                    <div class="concept-box">
+                    <div class="concept-box animated {{one ? 'fadeInDown' : ''}}">
                         <img src="/assets/images/index/concept-2@2x.png">
                         <p>优化配方</p>
                     </div>
                 </div>
                 <div class="pure-u-1-4">
-                    <div class="concept-box">
+                    <div class="concept-box animated {{one ? 'fadeInDown' : ''}}">
                         <img src="/assets/images/index/concept-3@2x.png">
                         <p>无菌工艺</p>
                     </div>
                 </div>
                 <div class="pure-u-1-4">
-                    <div class="concept-box">
+                    <div class="concept-box animated {{one ? 'fadeInDown' : ''}}">
                         <img src="/assets/images/index/concept-4@2x.png">
                         <p>制药标准</p>
                     </div>

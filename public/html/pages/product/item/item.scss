@@ -10,15 +10,10 @@
   margin: 40px 0 0 0;
 
   .banner {
-    height: 750px;
-    position: relative;
 
     img {
       display: block;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      margin-left: -960px;
+      width: 100%;
     }
   }
 

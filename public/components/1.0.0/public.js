@@ -16662,6 +16662,16 @@ appServices.factory('productSvc', ['$q', '$http', function ($q, $http) {
 
 'use strict';
 
+app.controller('headerController', ['$scope', '$location', 'productSvc', function ($scope, $location, productSvc) {
+    $scope.show = false;
+    $scope.setState = function (state) {
+        $scope.show = state;
+        console.log($scope.show);
+    }
+}]);
+
+'use strict';
+
 app.directive('ngFooter', ['$location', function ($location) {
   return {
     restrict: 'C',
@@ -16670,16 +16680,6 @@ app.directive('ngFooter', ['$location', function ($location) {
     link: function (scope, element, attrs) {
     }
   };
-}]);
-
-'use strict';
-
-app.controller('headerController', ['$scope', '$location', 'productSvc', function ($scope, $location, productSvc) {
-    $scope.show = false;
-    $scope.setState = function (state) {
-        $scope.show = state;
-        console.log($scope.show);
-    }
 }]);
 
 'use strict';
@@ -16703,6 +16703,18 @@ app.directive('ngOwl', ['$location', 'appSvc', function ($location, appSvc) {
 
 'use strict';
 
+app.directive('ngPage', ['$location', 'appSvc', function ($location, appSvc) {
+    return {
+        restrict: 'A',
+        scope: {},
+        link: function (scope, element, attrs) {
+
+        }
+    };
+}]);
+
+'use strict';
+
 app.directive("ngTabs", ['$location', function ($location) {
     return {
         restrict: 'C',
@@ -16713,18 +16725,6 @@ app.directive("ngTabs", ['$location', function ($location) {
 
             scope.tab = $.parseJSON(attrs.tab);
             scope.$emit('tab', scope.tab);
-        }
-    };
-}]);
-
-'use strict';
-
-app.directive('ngPage', ['$location', 'appSvc', function ($location, appSvc) {
-    return {
-        restrict: 'A',
-        scope: {},
-        link: function (scope, element, attrs) {
-
         }
     };
 }]);
@@ -16745,6 +16745,16 @@ app.directive('ngTop', ['$location', 'appSvc', function ($location, appSvc) {
 }]);
 
 'use strict';
+app.controller('conceptController', ['$scope', function ($scope) {
+    $(window).on('scroll', function (e) {
+        $scope.$apply(function () {
+            $scope.scrollTop = e.currentTarget.scrollY;
+        });
+    });
+    new WOW().init();
+}]);
+
+'use strict';
 app.controller('contactController', ['$scope', function ($scope) {
 
     $(window).on('scroll', function (e) {
@@ -16752,11 +16762,17 @@ app.controller('contactController', ['$scope', function ($scope) {
             $scope.scrollTop = e.currentTarget.scrollY;
         });
     });
+    new WOW().init();
 }]);
 
 'use strict';
-app.controller('conceptController', ['$scope', function ($scope) {
-
+app.controller('researchController', ['$scope', function ($scope) {
+    $(window).on('scroll', function (e) {
+        $scope.$apply(function () {
+            $scope.scrollTop = e.currentTarget.scrollY;
+        });
+    });
+    new WOW().init();
 }]);
 
 'use strict';
@@ -16770,65 +16786,16 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         });
 }]).controller('indexController', ['$scope', '$location', 'productSvc', function ($scope, $location, productSvc) {
     var $banner = $('#banner');
-    var $concept = $('.section-concept')[0];
-    var $video = $('.section-video')[0];
-    var $catalog = $('.section-catalog')[0];
-    var $product = $('.section-product')[0];
-    $scope.scrollY = 0;
-    $scope.page = 0;
-    $scope.zero = true;
-    $scope.one = false;
-    $scope.two = false;
-    $scope.three = false;
-    $scope.four = false;
-    $scope.fire = false;
     $scope.setHeight = function () {
         $banner.css('height', $('body')[0].clientHeight);
-        // $('.section-video').css('height', $('body')[0].clientHeight);
     };
     $scope.setHeight();
     $(window).on('scroll', function (e) {
         $scope.$apply(function () {
             $scope.scrollTop = e.currentTarget.scrollY;
-            $scope.scrollY = $scope.scrollTop + $('body')[0].clientHeight / 1.5;
-            if($scope.scrollY > $banner[0].offsetTop && $scope.scrollY < $concept.offsetTop){
-                $scope.page = 0;
-                $scope.zero = true;
-            }
-            if($scope.scrollY > $concept.offsetTop && $scope.scrollY < $video.offsetTop){
-                $scope.page = 1;
-                $scope.one = true;
-            }
-            if($scope.scrollY > $video.offsetTop && $scope.scrollY < $catalog.offsetTop){
-                $scope.page = 2;
-                $scope.two = true;
-            }
-            if($scope.scrollY > $catalog.offsetTop && $scope.scrollY < $product.offsetTop){
-                $scope.page = 3;
-                $scope.three = true;
-            }
-            if($scope.scrollY > $product.offsetTop){
-                $scope.page = 5;
-                $scope.fire = true;
-            }
-            //$scope.page = Math.round($scope.scrollY / $('body')[0].clientHeight);
         });
     });
-}]);
-
-'use strict';
-app.controller('researchController', ['$scope', function ($scope) {
-
-}]);
-
-'use strict';
-
-app.controller('articleListController', ['$scope', '$location', 'articleSvc', function ($scope, $location, articleSvc) {
-    $(window).on('scroll', function (e) {
-        $scope.$apply(function () {
-            $scope.scrollTop = e.currentTarget.scrollY;
-        });
-    });
+    new WOW().init();
 }]);
 
 "use strict";
@@ -16842,6 +16809,16 @@ app.controller('articleItemController', ['$scope', '$location', 'productSvc', fu
 }]);
 
 'use strict';
+
+app.controller('articleListController', ['$scope', '$location', 'articleSvc', function ($scope, $location, articleSvc) {
+    $(window).on('scroll', function (e) {
+        $scope.$apply(function () {
+            $scope.scrollTop = e.currentTarget.scrollY;
+        });
+    });
+}]);
+
+'use strict';
 app.controller('productItemController', ['$scope', '$location', 'productSvc', function ($scope, $location, productSvc) {
   $(window).on('scroll', function (e) {
     $scope.$apply(function () {
@@ -16852,19 +16829,11 @@ app.controller('productItemController', ['$scope', '$location', 'productSvc', fu
 
 'use strict';
 app.controller('productListController', ['$scope', '$location', 'productSvc', function ($scope, $location, productSvc) {
-    $scope.totalPages = 5;
-    $scope.page = 1;
-    productSvc.list().then(function success(res) {
-        $scope.products = res;
-    });
-    $scope.$on('tab', function (e, data) {
-        $scope.tab = data;
-        console.log($scope.tab);
-    });
 
     $(window).on('scroll', function (e) {
         $scope.$apply(function () {
             $scope.scrollTop = e.currentTarget.scrollY;
         });
     });
+    new WOW().init();
 }]);

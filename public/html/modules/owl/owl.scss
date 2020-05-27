@@ -2,63 +2,61 @@
 
 .owl-carousel {
   height: 100%;
+  .owl-wrapper-outer {
+    height: 100%;
+    .owl-wrapper {
+      height: 100%;
+      .owl-item {
+        height: 100%;
+      }
+    }
+  }
   .carousel-item {
     height: 100%;
     width: 100%;
     display: block;
     background-repeat: no-repeat;
     background-position: center center;
-
-    .banner-content {
-      color: $color-empty;
-      padding: 170px 0 0 100px;
-      h2 {
-        font-size: 34px;
-        margin: 0 0 20px;
-      }
-      p {
-        font-size: 16px;
-        font-weight: 400;
-        width: 420px;
-      }
-      a {
-        width: 120px;
-        height: 40px;
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.25) 100%);
-        border-radius: 4px;
-        border: 1px solid rgba(255, 255, 255, 1);
-        display: block;
-        text-align: center;
-        line-height: 38px;
-        color: $color-empty;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 500;
-        margin-top: 40px;
-      }
-    }
   }
 
   .owl-buttons {
-    display: none;
   }
 
   .owl-controls {
+    margin-top: -28px;
     position: absolute;
+    top: 50%;
     width: 100%;
-    bottom: 0;
-
-    .owl-page {
-      span {
+    .owl-buttons {
+      .owl-prev {
+        position: absolute;
+        width: 28px;
+        height: 56px;
+        left: 34px;
+        top: 0;
+        background-image: url("/assets/images/prev@2x.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
         border-radius: 0;
-        width: 30px;
-        height: 3px;
-        margin: 5px;
+        background-color: transparent;
+        text-indent: 99999999em;
       }
-
-      &.active span {
-        background-color: $color-empty;
+      .owl-next {
+        position: absolute;
+        width: 28px;
+        height: 56px;
+        right: 34px;
+        top: 0;
+        background-image: url("/assets/images/next@2x.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        border-radius: 0;
+        background-color: transparent;
+        text-indent: 99999999em;
       }
+    }
+    .owl-pagination {
+      display: none;
     }
   }
 }

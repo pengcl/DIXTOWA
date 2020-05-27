@@ -23,7 +23,7 @@
   }
 
   p {
-    line-height: 20px;
+    line-height: 24px;
     margin: 55px 0 0 50px;
   }
 
@@ -34,17 +34,11 @@
 
 .research-wrap {
   .banner {
-    height: 630px;
-    overflow: hidden;
-    position: relative;
     margin-top: 100px;
 
     img {
       display: block;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      margin-left: -960px;
+      width: 100%;
     }
   }
 
@@ -71,6 +65,8 @@
   }
 
   .interview {
+    max-width: 1920px;
+    margin: 0 auto;
     .pure-g {
       margin: 100px 0;
     }

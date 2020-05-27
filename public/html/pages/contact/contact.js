@@ -6,4 +6,5 @@ app.controller('contactController', ['$scope', function ($scope) {
             $scope.scrollTop = e.currentTarget.scrollY;
         });
     });
+    new WOW().init();
 }]);
