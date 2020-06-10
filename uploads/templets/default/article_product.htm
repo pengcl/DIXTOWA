@@ -6,6 +6,8 @@
     <title ng-bind="pageTitle"></title>
     <meta name="keywords" content="{{pageKeywords}}">
     <meta name="description" content="">
+    <meta name="viewport"
+          content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.1/pure-min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_1427441_ocz6ko6ler.css">
@@ -44,8 +46,11 @@
             <div class="banner">
                 <img src="{dede:field.banner/}">
             </div>
-            <div class="detail">
+            <div class="pc detail">
                 {dede:field.body/}
+            </div>
+            <div class="mobile detail">
+                {dede:field.mobilebody/}
             </div>
         </div>
         <div class="ng-footer"></div>

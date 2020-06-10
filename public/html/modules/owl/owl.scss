@@ -2,15 +2,19 @@
 
 .owl-carousel {
   height: 100%;
+
   .owl-wrapper-outer {
     height: 100%;
+
     .owl-wrapper {
       height: 100%;
+
       .owl-item {
         height: 100%;
       }
     }
   }
+
   .carousel-item {
     height: 100%;
     width: 100%;
@@ -27,6 +31,7 @@
     position: absolute;
     top: 50%;
     width: 100%;
+
     .owl-buttons {
       .owl-prev {
         position: absolute;
@@ -41,6 +46,7 @@
         background-color: transparent;
         text-indent: 99999999em;
       }
+
       .owl-next {
         position: absolute;
         width: 28px;
@@ -55,8 +61,13 @@
         text-indent: 99999999em;
       }
     }
+
     .owl-pagination {
       display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      display: none !important;
     }
   }
 }
