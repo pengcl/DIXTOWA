@@ -2,22 +2,23 @@
 var app = angular.module('app', ['ngRoute', 'appServices', 'appTemplates', 'ngAnimate', 'ngCookies', 'appFilters']);
 
 app.config(['$routeProvider', '$locationProvider',
-  function ($routeProvider, $locationProvider) {
-    $routeProvider.otherwise({
-      redirectTo: (function () {
-        return 'index';
-      })()
-    });
-    //$locationProvider.html5Mode(true);
-  }]).config(['$sceProvider', function ($sceProvider) {
-  //For sport ie7
-  $sceProvider.enabled(false);
+    function ($routeProvider, $locationProvider) {
+        $routeProvider.otherwise({
+            redirectTo: (function () {
+                return 'index';
+            })()
+        });
+        //$locationProvider.html5Mode(true);
+    }]).config(['$sceProvider', function ($sceProvider) {
+    //For sport ie7
+    $sceProvider.enabled(false);
 }]).controller('appController', [function () {
 
 }]).run(['$rootScope', function ($rootScope) {
-  $rootScope.$on('$locationChangeStart', function () {//初始化全局控件的状态
-    toTop();
-  });
+    $rootScope.pageTitle = 'DIXTOWA';
+    $rootScope.$on('$locationChangeStart', function () {//初始化全局控件的状态
+        toTop();
+    });
 }]);
 
 var CITIES = [
@@ -16522,8 +16523,8 @@ function getIndex(jsonArray, keyName, value) {
 //回到页面顶部
 function toTop() {
     $("html,body").animate({
-        scrollTop: $("body").offset().top
-    }, 500, 'swing');
+        scrollTop: $("html,body").offset().top
+    }, 300, 'swing');
 }
 
 var ua = navigator.userAgent;
@@ -16662,41 +16663,12 @@ appServices.factory('productSvc', ['$q', '$http', function ($q, $http) {
 
 'use strict';
 
-app.controller('headerController', ['$scope', '$location', 'productSvc', function ($scope, $location, productSvc) {
-    $scope.show = false;
-    $scope.setState = function (state) {
-        $scope.show = state;
-        console.log($scope.show);
-    }
-}]);
-
-'use strict';
-
 app.directive('ngFooter', ['$location', function ($location) {
   return {
     restrict: 'C',
     scope: {},
     templateUrl: 'modules/footer/footer.html',
     link: function (scope, element, attrs) {
-    }
-  };
-}]);
-
-'use strict';
-
-app.directive('ngOwl', ['$location', 'appSvc', function ($location, appSvc) {
-  return {
-    restrict: 'C',
-    scope: {},
-    templateUrl: 'modules/owl/owl.html',
-    link: function (scope, element, attrs) {
-      $(".owl-carousel").owlCarousel({
-        navigation: true, // Show next and prev buttons
-        slideSpeed: 300,
-        paginationSpeed: 400,
-        singleItem: true,
-        autoPlay: 3000
-      });
     }
   };
 }]);
@@ -16745,6 +16717,35 @@ app.directive('ngTop', ['$location', 'appSvc', function ($location, appSvc) {
 }]);
 
 'use strict';
+
+app.directive('ngOwl', ['$location', 'appSvc', function ($location, appSvc) {
+  return {
+    restrict: 'C',
+    scope: {},
+    templateUrl: 'modules/owl/owl.html',
+    link: function (scope, element, attrs) {
+      $(".owl-carousel").owlCarousel({
+        navigation: true, // Show next and prev buttons
+        slideSpeed: 300,
+        paginationSpeed: 400,
+        singleItem: true,
+        autoPlay: 3000
+      });
+    }
+  };
+}]);
+
+'use strict';
+
+app.controller('headerController', ['$scope', '$location', 'productSvc', function ($scope, $location, productSvc) {
+    $scope.show = false;
+    $scope.setState = function (state) {
+        $scope.show = state;
+        console.log($scope.show);
+    }
+}]);
+
+'use strict';
 app.controller('conceptController', ['$scope', function ($scope) {
     $(window).on('scroll', function (e) {
         $scope.$apply(function () {
@@ -16757,16 +16758,6 @@ app.controller('conceptController', ['$scope', function ($scope) {
 'use strict';
 app.controller('contactController', ['$scope', function ($scope) {
 
-    $(window).on('scroll', function (e) {
-        $scope.$apply(function () {
-            $scope.scrollTop = e.currentTarget.scrollY;
-        });
-    });
-    new WOW().init();
-}]);
-
-'use strict';
-app.controller('researchController', ['$scope', function ($scope) {
     $(window).on('scroll', function (e) {
         $scope.$apply(function () {
             $scope.scrollTop = e.currentTarget.scrollY;
@@ -16790,6 +16781,16 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         $banner.css('height', $('body')[0].clientHeight);
     };
     $scope.setHeight();
+    $(window).on('scroll', function (e) {
+        $scope.$apply(function () {
+            $scope.scrollTop = e.currentTarget.scrollY;
+        });
+    });
+    new WOW().init();
+}]);
+
+'use strict';
+app.controller('researchController', ['$scope', function ($scope) {
     $(window).on('scroll', function (e) {
         $scope.$apply(function () {
             $scope.scrollTop = e.currentTarget.scrollY;

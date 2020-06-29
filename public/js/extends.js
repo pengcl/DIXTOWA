@@ -19,8 +19,8 @@ function getIndex(jsonArray, keyName, value) {
 //回到页面顶部
 function toTop() {
     $("html,body").animate({
-        scrollTop: $("body").offset().top
-    }, 500, 'swing');
+        scrollTop: $("html,body").offset().top
+    }, 300, 'swing');
 }
 
 var ua = navigator.userAgent;
