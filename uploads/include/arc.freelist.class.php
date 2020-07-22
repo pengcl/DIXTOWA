@@ -832,17 +832,7 @@ class FreeList
         $optionlen = $optionlen*12 + 18;
         if($optionlen < 36) $optionlen = 36;
         if($optionlen > 100) $optionlen = 100;
-        $optionlist = "<select name='sldd' style='width:$optionlen' onchange='location.href=this.options[this.selectedIndex].value;'>\r\n";
-        for($fl=1; $fl<=$totalpage; $fl++)
-        {
-            if($fl==$this->PageNo)
-            {
-                $optionlist .= "<option value='" . str_replace("{page}",$fl,$tnamerule) . "' selected>$fl</option>\r\n";
-            } else {
-                $optionlist .= "<option value='" . str_replace("{page}",$fl,$tnamerule)."'>$fl</option>\r\n";
-            }
-        }
-        $optionlist .= "</select>";
+        $optionlist .= "";
 
         //获得数字链接
         $listdd="";

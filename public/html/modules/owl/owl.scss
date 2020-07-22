@@ -21,6 +21,64 @@
     display: block;
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: cover;
+    &:nth-child(1) {
+      background-image: url("/assets/images/banner/0.gif");
+    }
+    &:nth-child(2) {
+      background-image: url("/assets/images/banner/1.jpg");
+    }
+    &:nth-child(3) {
+      background-image: url("/assets/images/banner/2.jpg");
+    }
+    &:nth-child(4) {
+      background-image: url("/assets/images/banner/3.jpg");
+    }
+  }
+
+  .owl-item {
+    &:nth-child(1) {
+      .carousel-item {
+        background-image: url("/assets/images/banner/0.gif");
+      }
+    }
+    &:nth-child(2) {
+      .carousel-item {
+        background-image: url("/assets/images/banner/1.jpg");
+      }
+    }
+    &:nth-child(3) {
+      .carousel-item {
+        background-image: url("/assets/images/banner/2.jpg");
+      }
+    }
+    &:nth-child(4) {
+      .carousel-item {
+        background-image: url("/assets/images/banner/3.jpg");
+      }
+    }
+    @media screen and (max-width: 600px) {
+      &:nth-child(1) {
+        .carousel-item {
+          background-image: url("/assets/images/banner/mobile/0.gif");
+        }
+      }
+      &:nth-child(2) {
+        .carousel-item {
+          background-image: url("/assets/images/banner/mobile/1.jpg");
+        }
+      }
+      &:nth-child(3) {
+        .carousel-item {
+          background-image: url("/assets/images/banner/mobile/2.jpg");
+        }
+      }
+      &:nth-child(4) {
+        .carousel-item {
+          background-image: url("/assets/images/banner/mobile/3.jpg");
+        }
+      }
+    }
   }
 
   .owl-buttons {

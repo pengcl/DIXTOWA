@@ -10,22 +10,27 @@
   margin: 40px 0 0 0;
 
   .banner {
+    height: 750px;
+    background: #FAFAFA;
 
     img {
       display: block;
-      width: 100%;
+      width: auto;
+      margin: 0 auto;
+      height: 100%;
     }
   }
 
   .detail {
     width: 1280px;
-    margin: 100px auto;
+    margin: 0 auto 100px;
 
     img {
       display: block;
       width: 100% !important;
       height: auto !important;
     }
+
     &.mobile {
       display: none;
     }
@@ -33,15 +38,29 @@
 
   @media screen and (max-width: 600px) {
     margin: 45px 0 0 0;
+    .banner {
+      height: calc(100vh - 45px);
+      background: #FAFAFA;
+
+      img {
+        display: block;
+        width: auto;
+        margin: 0 auto;
+        height: 100%;
+      }
+    }
     .detail {
       width: 100%;
+
       img {
         display: block;
         width: 100% !important;
       }
+
       &.pc {
         display: none;
       }
+
       &.mobile {
         display: block;
       }
